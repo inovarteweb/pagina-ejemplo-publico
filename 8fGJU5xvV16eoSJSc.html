@@ -1,0 +1,735 @@
+<html><head><base href="https://miniyo.net%20ten%20en%20cuenta%20que%20todav%C3%ADa%20no%20podemos%20procesar%20pagos%20en%20linea,%20asi%20que%20no%20pongas%20el%20precio%20en%20el%20producto,%20y%20cambia%20el%20%22a%C3%B1adir%20a%20carrito%22%20por%20contactanos%20por%20whatsapp%20o%20algo%20asi%20para%20que%20nos%20escriban"><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniYo - Miniaturas Personalizadas Espectaculares</title>
+
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '411920015052007');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=411920015052007&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0f5caabd52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="icon" href="favicon.ico">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        :root {
+            --primary-color: #000000;
+            --secondary-color: #FFA500;
+            --tertiary-color: #FFFFFF;
+            --background-color: #1A1A1A;
+            --text-color: #FFFFFF;
+            --accent-color: #FF4500;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        header.scrolled {
+            background-color: rgba(0, 0, 0, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        #logo {
+            max-width: 100px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        #logo:hover {
+            transform: scale(1.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            color: var(--tertiary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--secondary-color);
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav ul li a:hover::after {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--tertiary-color);
+        }
+
+        main {
+            margin-top: 80px;
+        }
+
+        .hero {
+            position: relative;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('img/hero-bg.jpg') no-repeat center center/cover;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.5s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            animation: pulse 2s infinite;
+        }
+
+        .cta-button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin: 3rem 0;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 10px auto;
+        }
+
+        .sobre-nosotros {
+            padding: 5rem 0;
+            background-color: #222;
+        }
+
+        .sobre-nosotros-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .sobre-nosotros-text {
+            flex: 1;
+            padding-right: 3rem;
+        }
+
+        .sobre-nosotros-image {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .sobre-nosotros-image img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+        }
+
+        .sobre-nosotros-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .nuestro-proceso {
+            background-color: #111;
+            padding: 5rem 0;
+            position: relative;
+        }
+
+        .process-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-step {
+            text-align: center;
+            width: 250px;
+            margin: 2rem;
+            padding: 2rem;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255,165,0,0.2);
+        }
+
+        .process-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .process-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .productos {
+            padding: 5rem 0;
+            background-color: #222;
+        }
+
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .product-card {
+            width: 300px;
+            margin: 2rem;
+            background-color: #333;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(255,165,0,0.3);
+        }
+
+        .product-image {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .product-button:hover {
+            background-color: var(--accent-color);
+        }
+
+        .contacto {
+            padding: 5rem 0;
+            background-color: #111;
+        }
+
+        #contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 2rem;
+            background-color: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        #contact-form label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--secondary-color);
+        }
+
+        #contact-form input,
+        #contact-form textarea {
+            width: 100%;
+            padding: 0.5rem;
+            margin-bottom: 1rem;
+            background-color: rgba(255,255,255,0.1);
+            border: none;
+            border-bottom: 2px solid var(--secondary-color);
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+
+        #contact-form input:focus,
+        #contact-form textarea:focus {
+            background-color: rgba(255,255,255,0.2);
+            outline: none;
+        }
+
+        #contact-form button {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 2rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #contact-form button:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(255, 165, 0, 0.3);
+        }
+
+        footer {
+            background-color: #000;
+            color: var(--tertiary-color);
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-section {
+            flex: 1;
+            margin: 1rem;
+            min-width: 200px;
+        }
+
+        .footer-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .footer-links a {
+            display: block;
+            color: var(--tertiary-color);
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .social-links a {
+            display: inline-block;
+            margin-right: 1rem;
+            color: var(--tertiary-color);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--secondary-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.9);
+                padding: 1rem;
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 1rem 0;
+            }
+
+            .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .sobre-nosotros-content {
+                flex-direction: column;
+            }
+
+            .sobre-nosotros-text {
+                padding-right: 0;
+                margin-bottom: 2rem;
+            }
+
+            .process-step {
+                width: 100%;
+            }
+
+            .product-card {
+                width: 100%;
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/logo4.png" alt="Logo MiniYo" id="logo">
+            <div class="menu-toggle">☰</div>
+            <ul>
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-nosotros" class="nav-link">Sobre nosotros</a></li>
+                <li><a href="#nuestro-proceso" class="nav-link">Nuestro Proceso</a></li>
+                <li><a href="#productos" class="nav-link">Productos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1 class="animate__animated animate__fadeInDown">Miniaturas Personalizadas Espectaculares</h1>
+                <p class="animate__animated animate__fadeInUp animate__delay-1s">Captura tu esencia en una réplica exacta</p>
+                <a href="#productos" class="cta-button animate__animated animate__fadeInUp animate__delay-2s">Descubre Nuestros Productos</a>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros" class="sobre-nosotros">
+            <h2 class="section-title">Sobre Nosotros</h2>
+            <div class="sobre-nosotros-content">
+                <div class="sobre-nosotros-text">
+                    <p>En MiniYo, nos especializamos en crear miniaturas personalizadas y detalladas que son réplicas exactas de las personas. Nuestro objetivo es ofrecer un producto único y de alta calidad que capture la esencia y personalidad de cada individuo.</p>
+                    <p>Nuestro equipo está compuesto por expertos en diseño y modelado 3D, quienes utilizan la última tecnología para asegurar que cada miniatura sea perfecta. Desde la recepción de tu foto hasta la entrega de tu miniatura, nos aseguramos de que cada paso del proceso sea manejado con el mayor cuidado y profesionalismo.</p>
+                </div>
+                <div class="sobre-nosotros-image">
+                    <img src="img/107ec6e0-e5c6-4d7e-9f35-f5d60dfc2bb4.jpg" alt="Equipo MiniYo trabajando">
+                </div>
+            </div>
+        </section>
+
+        <section id="nuestro-proceso" class="nuestro-proceso">
+            <h2 class="section-title">Nuestro Proceso</h2>
+            <div class="process-container">
+                <div class="process-step">
+                    <div class="process-icon"><i class="fas fa-camera"></i></div>
+                    <h3 class="process-title">Captura</h3>
+                    <p>Toma 3 fotos de cuerpo completo: frente, perfil y espalda. Asegúrate de que sean nítidas y claras.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><i class="fas fa-paper-plane"></i></div>
+                    <h3 class="process-title">Envío</h3>
+                    <p>Envía las fotos a nuestro WhatsApp o Facebook dedicado para comenzar el proceso.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><i class="fas fa-check-circle"></i></div>
+                    <h3 class="process-title">Aprobación</h3>
+                    <p>Nuestro equipo revisará la foto para asegurarse de que cumpla con los requisitos necesarios para una reproducción de alta calidad.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-icon"><i class="fas fa-truck"></i></div>
+                    <h3 class="process-title">Entrega</h3>
+                    <p>Tras la aprobación, comenzaremos la creación de tu figura MiniYo. Te mantendremos informado sobre el progreso y te avisaremos cuando tu MiniYo esté listo para ser enviado.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="productos" class="productos">
+            <h2 class="section-title">Nuestros Productos</h2>
+            <div class="product-container">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/miniatura_figura20cm.png" alt="Figura de 17 cm - Crystal Memories">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Crystal Memories - 17 cm</h3>
+                        <a href="https://wa.me/51963731505" class="product-button">Contactar por WhatsApp</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="img/manito.webp" alt="Figura de 20 cm - Shadow Silhouette">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Shadow Silhouette - 20 cm</h3>
+                        <a href="https://wa.me/51963731505" class="product-button">Contactar por WhatsApp</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contacto">
+            <h2 class="section-title">Contacto</h2>
+            <form id="contact-form" action="https://miniyo.net/enviar-formulario" method="GET">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 class="footer-title">Enlaces rápidos</h3>
+                <div class="footer-links">
+                    <a href="#inicio">Inicio</a>
+                    <a href="#sobre-nosotros">Sobre nosotros</a>
+                    <a href="#nuestro-proceso">Nuestro Proceso</a>
+                    <a href="#productos">Productos</a>
+                    <a href="#contacto">Contacto</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Contacto</h3>
+                <p>Email: mailminiyo@gmail.com</p>
+                <p>Teléfono: +51 963731505</p>
+            </div>
+            <div class="footer-section">
+                <h3 class="footer-title">Síguenos</h3>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/profile.php?id=61556933126064" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/replicas_miniyo/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/tuTwitter" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://wa.me/51963731505" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 MiniYo. Todos los derechos reservados.</p>
+            <a href="PoliticadePrivacidad.html">Política de Privacidad</a> | <a href="TerminosdeUso.html">Términos de Uso</a>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const header = document.querySelector('header');
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navUl = document.querySelector('nav ul');
+
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+
+            menuToggle.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+
+            document.querySelectorAll('a.nav-link').forEach(function(link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                    if (window.innerWidth <= 768) {
+                        navUl.classList.remove('active');
+                    }
+                });
+            });
+
+            // Animaciones al hacer scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.animate-on-scroll');
+                elements.forEach(element => {
+                    if (isElementInViewport(element)) {
+                        element.classList.add('animate__animated', element.dataset.animation);
+                    }
+                });
+            };
+
+            function isElementInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                return (
+                    rect.top >= 0 &&
+                    rect.left >= 0 &&
+                    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                    rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+                );
+            }
+
+            window.addEventListener('scroll', animateOnScroll);
+            animateOnScroll(); // Ejecutar una vez al cargar la página
+        });
+    </script>
+</body>
+</html>
